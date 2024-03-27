@@ -1,0 +1,203 @@
+CRM (Customer relationship management)
+	Customer Called the company for enquiring about something
+	   --- Lead Generation 
+	Customer is interested in loan , Opened an account.
+	   --- Opportunity
+	Customer document verification and eligibility check
+	   --- lead/Opportunity conversion rate'
+	   	--- Pending Approvals
+	Customer When buys or coverts into customer
+	   --- Lead/Opportunity Conversion 
+
+	Follow up scenarios:
+		- User not reachable/not responding call/Email
+		- shown intrest in loan
+		- Wating for document 
+		- not doing repayment on time
+	pending scenarios for users
+		- document provided by customer not sufficient/valid/proper
+		- details provided by customer not sufficient/valid/proper
+	pending scenarios for CRM
+		- checking for document
+		- manager approval
+		- document not valid
+		- details not valid
+		- for Follow up scenarios:
+
+CRM
+
+	1. User and Modules
+		1. Personal Banker
+			--- Dashboard
+				-- Target leads and Opportunity
+				-- Charts Based
+
+			--- Leads 
+				-- Customer called for enquiry
+				-- user name
+				-- account no.
+				-- contact no.
+				-- address
+
+			--- Opportunity
+				-- try to convert leads into opportunity
+				-- Account Opening 
+				-- Loan Application
+				-- Other Enquiry
+			
+			--- Reports
+				-- Opportunity Conversion Progress
+
+			--- Accounts
+			
+
+		2. Manager Director
+			--- Dashboard
+				-- Charts based on Leads to convert into opportunity
+
+			--- Leads
+				-- Check the pending Leads 
+				-- check the going leads
+				-- check the completed leads
+
+			--- Opportunity
+				-- Leads conversion into opportunity Chart
+
+			--- Accounts
+				-- user account details
+
+			--- Reports
+				-- opportunity converion Progress Chart
+
+		3. Admin
+			--- Users Details
+			--- Accounts Details
+
+
+	2. Functionality
+		1. Employee
+			--- employee can check the user details
+			--- employee can check the user loan application
+			--- employee can check the user account details
+			--- employee can check the credit score 
+			--- employee can check the user other details and enquiries
+		
+		2. Admin
+			--- admin can check the employee targets and leads 
+
+		3. Users
+			- can enquire about loan.
+			- can have loan.
+			- can do repayment of EMI.
+
+	3. Data from User
+		- Name
+		- Email
+		- Contact 
+		- Address
+		- Salary
+		- Document
+		- Type of account
+		- Loan if any enquires
+
+
+	4. Data Flow
+		-- Detailed Uploaded by the employee by using Form
+		-- Checked by employee (Personal Banker)
+		-- Is Account Opened or Not
+			- Account Balance
+			- Apply For Loan
+				- Accept or Reject	
+
+	5.Process Flow
+		- is customer contacted?
+			- Yes
+				- Intrested in Loan
+					- Yes
+						- Does user have account?
+							- yes
+								- check for documents/account
+								- send to manager for Approvals
+									- Approved
+										- loan sanctioned
+									- Not Approved
+										- Check for details
+										- Ask customer for proper documents
+											-is document provided
+											- yes
+												- go to manager approval process
+											- not provided
+											- pending
+											- Follow Up 
+							- No
+							- Go to create account Process
+					- No
+						- Exit
+			- No
+				- Exit();
+			
+	
+	
+6. account creation process
+	-is document provided
+	- yes
+		- verify Document 
+			- document not proper
+				- pending
+				- Follow Up 
+			- verified
+				- account created
+				- notify customer
+				- can have loan
+				- can do repayment of EMI
+	- not provided
+		- pending
+		- Follow Up 
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.Called/Email to customer
+		- interested
+		- does user have account ?
+			-yes
+				- name
+				- Email
+				- contact number
+				- documents
+			-No
+				- create a account
+				- documents(salary,address, contact, name)
+		- Not intrested
+			- Exit();
+	2. Customer contacted/Email for loan
+		- does user have account ?
+			-yes
+				- name
+				- Email
+				- contact number
+				- documents
+			-No
+				- create a account
+				- documents(salary,address, contact, name)
+		- Not intrested
+			- Exit();
+
+----------------------------------------------------------------------
+how to reach/interaction with customer.
+	customer contacted to us  --- vise-versa
+		call
+		mail
+		message
+	~ requrement 
+		number 
+		mail address
+
+
+---------------------------
+	
+
+
+
+
+		  	
